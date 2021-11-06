@@ -3,6 +3,7 @@
 import { Base } from '../Base';
 import P from 'prop-types';
 import Head from 'next/head';
+import { theme } from '../../styles/theme'
 
 import { GridTwoColumns } from '../../components/GridTwoColumns';
 import { GridContent } from '../../components/GridContent';
@@ -17,7 +18,10 @@ function Home({ data }) {
     <>
       <Head>
         <title>{title}</title>
+        <meta name="theme-color" content={theme.colors.primaryColor} />
+        <meta name="description" content="Landing page next" />
       </Head>
+
       <Base
         links={links}
         footerHtml={footerHtml}
